@@ -7,8 +7,8 @@
 #include <fcntl.h>
 
 
-extern "C" JNIEXPORT jlong JNICALL Java_com_example_yunmiheo_1or_ndk_1test_MainActivity_MicroSleep(JNIEnv *env, jobject /* this */) {
-    jint iSleep = 60;
+extern "C" JNIEXPORT jlong JNICALL Java_com_example_yunmiheo_1or_ndk_1test_MainActivity_MicroSleep(JNIEnv *env, jobject /* this */, jint iSleep) {
+    //jint iSleep = 60;
     struct timeval tv;
     if (iSleep > 70)
         iSleep -= 70;
